@@ -32,11 +32,10 @@ export default {
       return id;
     },
     computedClasses() {
-      let cssClass = 'accordion';
-      if (this.flush) {
-        cssClass = 'accordion-flush';
-      }
-      return cssClass;
+      return {
+        accordion: true,
+        'accordion-flush': this.flush,
+      };
     },
   },
 };
