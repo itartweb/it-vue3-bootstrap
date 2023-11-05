@@ -1,7 +1,7 @@
 <template>
   <div :class="computedClasses" ref="element" role="alert" aria-live="polite" aria-atomic="true">
     <slot />
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <button v-if="dismissible" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 </template>
 
